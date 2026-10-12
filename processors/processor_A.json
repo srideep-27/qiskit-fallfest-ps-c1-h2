@@ -1,0 +1,16 @@
+{
+  "name": "Processor A",
+  "num_qubits": 5,
+  "coupling_edges": [[0, 1], [1, 2], [2, 3], [3, 4]],
+  "basis_gates": ["rz", "sx", "x", "cx"],
+  "noise": {
+    "one_qubit_depolarizing": 0.001,
+    "cx_depolarizing": 0.005,
+    "readout_error": 0.01
+  },
+  "transpilation": {
+    "optimization_level": 1,
+    "seed_transpiler": 42,
+    "shots": 4096
+  }
+}
