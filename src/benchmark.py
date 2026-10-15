@@ -40,14 +40,11 @@ solver = VQE(
 vqe_result = solver.compute_minimum_eigenvalue(total_hamiltonian)
 optimized_circuit = ansatz.assign_parameters(vqe_result.optimal_parameters)
 
-print(f"Ideal VQE energy: {vqe_result.optimal_value:.6f} Hartree")
-
 exact_energy = float(
     np.linalg.eigvalsh(total_hamiltonian.to_matrix())[0]
 )
 print(f"Ideal VQE energy: {vqe_result.optimal_value:.6f} Hartree")
 print(f"Exact reference:  {exact_energy:.6f} Hartree")
-
 for filename in [
     "processors/processor_A.json",
     "processors/processor_B.json",
