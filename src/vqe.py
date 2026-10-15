@@ -6,8 +6,8 @@ from qiskit_algorithms.optimizers import COBYLA
 from qiskit_nature.second_q.circuit.library import HartreeFock, UCCSD
 from qiskit_nature.second_q.mappers import JordanWignerMapper
 
-from problem import hamiltonian as original_hamiltonian
-from problem import nuclear_repulsion
+from .problem import hamiltonian as original_hamiltonian
+from .problem import nuclear_repulsion
 
 
 # Reorder the middle two qubits to match Qiskit Nature's

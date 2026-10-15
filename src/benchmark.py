@@ -8,10 +8,9 @@ from qiskit_nature.second_q.circuit.library import HartreeFock, UCCSD
 from qiskit_nature.second_q.mappers import JordanWignerMapper
 from qiskit_aer.primitives import Estimator as AerEstimator
 
-from problem import hamiltonian as original_hamiltonian
-from problem import nuclear_repulsion
-from processors import load_processor
-
+from .problem import hamiltonian as original_hamiltonian
+from .problem import nuclear_repulsion
+from .processors import load_processor
 
 # Match the Hamiltonian's qubit order to Qiskit Nature's Hartree-Fock state.
 reordered_terms = []
